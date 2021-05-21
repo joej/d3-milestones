@@ -356,6 +356,7 @@ export default function milestones(selector) {
             }
 
             const t = v[mapping.text];
+            const tag = v[mapping.csstag];
             let item;
             // test if text is an image filename,
             // if so return an image tag with the filename as the source
@@ -380,6 +381,7 @@ export default function milestones(selector) {
                 .append('span')
                 .classed('milestones-label', true)
                 .classed('milestones-text-label', true)
+                .classed('milestones-text-' + tag, true)  // joe - add the css tag
                 .text(t);
             }
 
